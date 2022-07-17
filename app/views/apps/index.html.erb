@@ -4,9 +4,9 @@
     <th>Content</th>
   </tr>
 
-  <% @posts.each do |post| %>
+  <% @apps.each do |post| %>
     <tr>
-      <td><%= post.content %></td>
+      <td><%= app.content %></td>
       <td><%= link_to '詳細を確認する', app_path(app.id) %></td>
       <td><%= link_to '投稿を編集する', edit_app_path(app.id) %></td>
       <td><%= link_to '投稿を削除する', app_path(app.id), method: :delete %></td>

@@ -1,15 +1,15 @@
 class AppsController < ApplicationController
   def index
-    @posts = Post.all
+    @apps = Post.all
   end
 
   def new
-    @post = Post.new
+    @app = Post.new
   end
 
   def create
-    @post = Post.new(app_params)
-    if @post.save
+    @app = Post.new(app_params)
+    if @app.save
       redirect_to apps_path, notice: 'コメントを投稿しました！'
     else
       render :new
